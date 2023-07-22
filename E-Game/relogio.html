@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            background-color: black;
+        }
+        h1{
+            color: white;
+        }
+        div{
+            text-align: center;
+        }
+        button{
+            height: 2.2em;
+            width: 5.5em;
+            border: none;
+            color: white;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        .start{
+            background-color: green;
+        }
+        .pause{
+            background-color: grey;
+        }
+        .stop{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1 id="watch">00:00:00</h1>
+        <button class="start" onclick="start()">Iniciar</button>
+        <button class="pause" onclick="pause()">Pausar</button>
+        <button class="stop" onclick="stop()">Parar</button>
+    </div>
+    <script src="/java.js"></script>
+</body>
+</html>

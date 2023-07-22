@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .rodapea{
+            background-color: rgb(4, 4, 71);
+            color: orangered;
+            display: flex;
+			height: 63px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .rodapec{
+            position: absolute;
+            bottom: 0;
+            background-color: rgb(4, 4, 71);
+            color: pink;
+            width: 100%;
+            height: 60px;    
+            text-align: center;
+            line-height: 60px;
+        }
+        
+        .rodapecb{
+			margin-top: 470px;
+            background-color: rgb(4, 4, 71);
+            color: orangered;
+			height: 52px; 
+            width: 100%;
+			position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .div{
+            font-size: 32px;
+            color: red;
+            position: absolute;
+            width: 638px;
+            height: 30px;
+            top: 20%;
+            left: 50%;
+            margin-left: -319px;
+            margin-top: -15;
+        }
+        .img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -225px;
+            margin-top: -125px;
+        }
+
+.divs{
+    font-size: 32px;
+    color: red;
+    position: absolute;
+    text-align: center;
+    margin-top: 200px;
+    left: 520px;
+    display: block;
+}
+
+
+button{
+    font-size: 20px;
+    height: 3.5em;
+    width: 4.8em;
+    border: none;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.iniciar{
+    background-color: rgb(11, 221, 29);
+    position: absolute;
+    text-align: center;
+    margin-top: 400px;
+    left: 565px;
+}
+.pause{
+    background-color: grey;
+    position: absolute;
+    text-align: center;
+    margin-top: 400px;
+    left: 705px;
+}
+
+    </style>
+</head>
+<body>
+    <script>
+        var sec = 11
+
+function start() {
+    interval = setInterval(watch,1000);
+}
+function pause() {
+    clearInterval(interval);
+}
+function watch() {
+    sec--
+    if(sec == -1){
+        clearInterval(interval)
+        alert("Acabou o tempo!")
+        let div = document.querySelector(".divs")
+
+        div.style.display = "none";
+    }
+    document.getElementById('watch').innerText= "Contando:" + sec
+    
+    
+}
+
+    </script>
+
+    <footer class="rodapea"><h1>Surpresa 4 </h1></footer>
+    
+    <div class="div"><p>Faça 10 flexões em 10 segundos ou volte 5 casas!</p></div>
+    
+    <button class="iniciar" onclick="start()">Iniciar</button>
+    <button class="pause" onclick="pause()">Parar</button>
+    <div class="divs">
+        <h1 id='watch'></h1>
+        
+    </div>
+
+    <header class="rodapec"><h1><a href="/Jogo ava.html"> Voltar  </a> </h1></header>
+</body>
+</html>

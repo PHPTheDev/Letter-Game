@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo legal</title>
+    <style type="text/css">
+
+        
+        body{
+            width: 99%;
+            height: 100px;
+            zoom: 80%;
+            background: linear-gradient(to left, rgb(243, 20, 20), rgb(243, 207, 6));
+        }
+        p{
+            font-size: 27px;
+            color: #000;
+            background-color: aqua;
+            padding: 5px 10px;
+            border: 1px solid black ;
+        }
+        .p{
+            font-size: 27px;
+            background-color: aqua;
+            padding-left: 3px;
+            padding-right: 3px;
+            border: 0px solid black ;
+        }
+        #Es{
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+        }
+        #Sus{
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+  
+        #div{
+            border: 3px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px; 
+            justify-content: center;           
+        }
+
+        .a{
+            
+            height: 70px;
+            width: 70px;
+            border: 3px black solid;    
+            position: absolute;
+            top: 40px;
+            left: 248px;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+        }
+        .b{
+            
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 122px;
+            left: 248px;
+        }
+        .c{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 204px;
+            left: 248px;
+
+        }
+        .d{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(240, 8, 228), rgb(52, 33, 221));
+            position: absolute;
+            top: 286px;
+            left: 248px;
+        }
+        .e{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 368px;
+            left: 248px;
+        }
+        .f{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 26, 255));
+            position: absolute;
+            top: 450px;
+            left: 248px;
+        }
+        .g{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 532px;
+            left: 248px;
+        }
+        .h{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(240, 8, 228), rgb(52, 33, 221));
+            position: absolute;
+            top: 614px;
+            left: 248px;
+        }
+        .i{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 696px;
+            left: 248px;
+        }
+        
+        .um{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 40px;
+            left: 330px;   
+        }
+        .dois{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(240, 8, 228), rgb(52, 33, 221));
+            position: absolute;
+            top: 122px;
+            left: 330px;
+        }
+        .tres{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 26, 255));
+            position: absolute;
+            top: 204px;
+            left: 330px;
+        }
+        .quatro{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 286px;
+            left: 330px;
+        }
+        .cinco{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 26, 255));
+            position: absolute;
+            top: 368px;
+            left: 330px;
+        }
+        .seis{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 450px;
+            left: 330px;
+        }
+        .sete{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 532px;
+            left: 330px;
+        }
+        .oito{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 26, 255));
+            position: absolute;
+            top: 614px;
+            left: 330px;
+        }
+        .nove{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 696px;
+            left: 330px;
+        } 
+
+        .a1{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 40px;
+            left: 412px;
+        }
+        .a2{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 26, 255));
+            position: absolute;
+            top: 40px;
+            left: 494px;
+        }
+        .a3{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 40px;
+            left: 576px;
+        }
+        .a4{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(240, 8, 228), rgb(52, 33, 221));
+            position: absolute;
+            top: 40px;
+            left: 658px;
+        }
+        .a6{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 122px;
+            left: 412px;
+        }
+        .a7{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 122px;
+            left: 494px;
+        }
+        .a8{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 26, 255));
+            position: absolute;
+            top: 122px;
+            left: 576px;
+        }
+        .a9{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 122px;
+            left: 658px;
+        }
+        
+        .b1{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 368px;
+            left: 412px;
+        }
+        .b2{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 368px;
+            left: 494px;
+        }
+        .b3{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(240, 8, 228), rgb(52, 33, 221));
+            position:absolute;
+            top: 368px;
+            left: 576px;
+        }
+        .b4{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 368px;
+            left: 658px;
+        }
+        .b6{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(240, 8, 228), rgb(52, 33, 221));
+            position: absolute;
+            top: 450px;
+            left: 412px;
+        }
+        .b7{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 450px;
+            left: 494px;
+        }
+        .b8{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position:absolute;
+            top: 450px;
+            left: 576px;
+        }
+        .b9{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 26, 255));
+            position: absolute;
+            top: 450px;
+            left: 658px;
+        }
+
+        .c1{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 696px;
+            left: 412px;
+        }
+        .c2{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(240, 8, 228), rgb(52, 33, 221));
+            position: absolute;
+            top: 696px;
+            left: 494px;
+        }
+        .c3{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 26, 255));
+            position:absolute;
+            top: 696px;
+            left: 576px;
+        }
+        .c4{
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border: 1px black solid;
+            background: linear-gradient(to right, rgb(217, 240, 8), rgb(71, 221, 33));
+            position: absolute;
+            top: 696px;
+            left: 658px;
+        }
+
+        .game{
+            border-radius: 0px;
+            font-size: 23px;
+            position: absolute;
+            width: 180px;
+            height: 90px;
+            border: 1px solid black;
+            background-color: yellow;
+            top: 140px;
+            left: 1300px;
+        }
+        #modal{
+            border-radius: 7px;
+            background: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            display: none;
+            animation-name: animate;
+            animation-duration: 800ms;
+            
+        }
+        @keyframes animate {
+            from{opacity: 1;}
+            from{opacity: 0;}
+        }
+        .box{
+            position: absolute;
+            background: linear-gradient(to left, rgb(38, 207, 4), rgb(21, 228, 200));
+            width: 50%;
+            height: 50%;
+            top: 25%;
+            left: 25%;
+            align-items: center;
+            justify-content: center;  
+        }   
+        .btn:hover{
+            color: red;
+            cursor: pointer;
+        }    
+        .fechar{
+            padding: 5px 10px;
+            border: 1px solid #000;
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            border-radius: 7px;
+            color: #000;
+            cursor: pointer;
+            animation: sim;
+            animation-duration: 800ms;
+        }
+        @keyframes sim {
+            
+            from{opacity: 0;}
+            from{opacity: 1;}
+        }
+        .fechar:hover {
+            color: rgb(199, 15, 15);
+            border-color: #000;
+        }
+
+        .dado{
+            position: absolute;
+            top: 500px;
+            left: 1320px;
+            image-rendering: optimizeSpeed;
+        }
+
+        .aperte{
+            position: absolute;
+            width: 170px;
+            height: 67px;
+            margin-top: 650px;
+            left: 1310px;
+            background-color: #87CEFA;
+            align-items: center;
+            display: flex;
+            font-size: 2rem;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 1.75em 2em;
+            cursor: pointer;
+            outline: none;
+            border: 0px;
+            border: 4px solid #4169E1;
+            border-radius: 3em;
+            text-transform: uppercase;
+            transform-style: preserve-3d;
+            transition: all 150ms cubic-bezier(.175, .885, .32, 1.275);
+        }
+        .aperte::before {
+            background: rgba(33, 219, 204, 0.8);
+            border-radius: inherit;
+            box-shadow: 0 0 0 2px rgba(44, 207, 194, 0.808), 0 0.3em 0 0 #4169E1;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            transform: translate3d(0, 0.75em, -1em);
+            transition: all 150ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%;
+        }
+        .aperte:hover {
+            transform: translate(0, 0.25em);
+        }
+        .aperte:hover::before {
+            box-shadow: 0 0 0 2px rgba(7, 236, 217, 0.45), 0 0.2em 0 0 #4169E1;
+            transform: translate3d(0, 0.5em, -1em);
+        }
+        .aperte:active {
+            background: #ffe9e9;
+            transform: translate(0, 0.90em);
+        }
+        .aperte:active::before {
+            box-shadow: 0 0 0 1px rgba(7, 236, 217, 0.45), 0 5 #4169E1;
+            transform: translate3d(0, 0, -1em);
+        }
+        .bto:hover{
+            color: red;
+            cursor: pointer;
+        } 
+
+        .win{
+            background: linear-gradient(to right, rgb(234, 250, 8), rgb(245, 10, 10));
+            position: absolute;
+            height: 140px;
+            width: 270px;
+            border: 1px solid black; 
+            top: 565px;
+            left: 890px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 1s;
+        }
+        #win{
+            color: gold;
+            background-color: blue;
+            font-size: 70px;
+            padding: 10px;
+        }
+        .win:hover{
+            transform: rotate(-1080deg) scale(1.2);
+        }
+        #a:hover{
+            color: rgb(43, 226, 156);
+        }
+        #a{
+            text-decoration: dashed;
+            color: rgb(172, 206, 19);
+        }
+
+        #b:hover{
+            color: rgb(21, 226, 141);
+        }
+        #b{
+            text-decoration: dashed;
+            color: rgb(235, 67, 235);
+        }
+
+        .d, .f, .h, .dois, .tres, .cinco, .oito, .a2, .a4, .a8, .b3, .b6, .b9, .c2,.c3 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 800ms;
+        }
+
+        .d:hover, .f:hover, .h:hover, .dois:hover, .tres:hover, .cinco:hover, .oito:hover, .a2:hover, .a4:hover, .a8:hover, .b3:hover, .b6:hover, .b9:hover, .c2:hover , .c3:hover {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        
+        
+        
+
+    </style>
+</head>
+<body>
+    
+    <div id="div" class="a"><p class="p"> Inicio</p></div>
+    <div id="div" class="b"><p> 11 </a></div>
+    <div id="div" class="c"><p> 12 </p> </div>
+    <div id="div" class="d"><a id="a" href="/desafios/desafio3.html"><b id="Es"> Pergunta Surpresa</b></a> </div>
+    <div id="div" class="e"><p> 16 </p> </div>
+    <div id="div" class="f"><a id="b" href="/surpresas/surpresa6.html"><b id="Sus"> Surpresa </b></a></div>
+    <div id="div" class="g"><p> 28 </p> </div>
+    <div id="div" class="h"><b id="Es"><a id="a" href="/desafios/desafio6.html"> Pergunta Surpresa</b></a></div>
+    <div id="div" class="i"><p> 32 </p> </div>
+    
+    <div id="div" class="um"><p> 1 </p> </div>
+    <div id="div" class="dois"><a id="a" href="/desafios/desafio2.html"> <b id="Es"> Pergunta Surpresa</b></a> </div>
+    <div id="div" class="tres"><a id="b" href="/surpresas/surpresa3.html"><b id="Sus"> Surpresa </b></a></div>
+    <div id="div" class="quatro"><p> 14 </p></div>
+    <div id="div" class="cinco"><a id="b" href="/surpresas/surpresa4.html"><b id="Sus"> Surpresa </b></a></div>
+    <div id="div" class="seis"><p> 26 </p> </div>
+    <div id="div" class="sete"><p> 29 </p> </div>
+    <div id="div" class="oito"><a id="b" href="/surpresas/surpresa7.html"><b id="Sus"> Surpresa </b></a></div>
+    <div id="div" class="nove"><p> 33 </p> </div>
+    
+    <div id="div"class="a1"><p> 2 </p> </div>
+    <div id="div"class="a2"><a id="b" href="/surpresas/surpresa1.html"><b id="Sus"> Surpresa </b></a></div>
+    <div id="div"class="a3"><p> 4 </p> </div>
+    <div id="div"class="a4"><a id="a" href="/desafios/desafio1.html"><b id="Es"> Pergunta Surpresa</b> </a></div>
+    <div id="div"class="a6"><p> 9 </p> </div>
+    <div id="div"class="a7"><p> 8 </p> </div>
+    <div id="div"class="a8"><a id="b" href="/surpresas/surpresa2.html"><b id="Sus"> Surpresa </b></a></div>
+    <div id="div"class="a9"><p> 6 </p> </div>
+    
+    <div id="div"class="b1"><p> 18 </p> </div>
+    <div id="div"class="b2"><p> 19 </p></div>
+    <div id="div"class="b3"><a id="a" href="/desafios/desafio4.html"> <b id="Es"> Pergunta Surpresa</b></a> </div>
+    <div id="div"class="b4"><p> 21 </p> </div>
+    <div id="div"class="b6"><a id="a" href="/desafios/desafio5.html"> <b id="Es"> Pergunta Surpresa</b></a></div>
+    <div id="div"class="b7"><p> 24 </p> </div>
+    <div id="div"class="b8"><p> 23 </p> </div>
+    <div id="div"class="b9"><a id="b" href="/surpresas/surpresa5.html"><b id="Sus"> Surpresa </b></a></div>
+
+    <div id="div" class="c1"><p> 34 </p> </div>
+    <div id="div" class="c2"><a id="a" href="/desafios/desafio7.html"> <b id="Es"> Pergunta Especial</b></a></div>
+    <div id="div" class="c3"><a id="b" href="/surpresas/surpresa8.html"><b id="Sus"> Surpresa </b></a></div>
+    <div id="div" class="c4"><p class="p"> Fim </p></div>
+
+
+
+    <div class="win" >
+        <p id="win"><a href="/winner.html" id="a">Winner!</a></p>
+    </div>
+
+    <script>
+        function rolar(){
+            var sorteio = Math.floor(Math.random() * 6 + 1);
+
+        switch(sorteio){
+            case 1:
+                document.getElementById("face").src = "Imagens/dice1.png";
+                break;
+            case 2:
+                document.getElementById("face").src = "/Imagens/dice 2.png"
+                break;
+            case 3:
+                document.getElementById("face").src = "/Imagens/dice 3.png";
+                break;
+            case 4:
+                document.getElementById("face").src = "/Imagens/dice 4.png";
+                break;
+            case 5:
+                document.getElementById("face").src = "/Imagens/dice 5.png";
+                break;
+            case 6:
+                document.getElementById("face").src = "/Imagens/dice 6.png";
+                break;
+            default:
+                break;
+        }
+        }
+    </script>
+
+    <div class="dado"><img src="/Imagens/dice1.png" alt="dado" id="face" width="150px" height="150px"></div>
+    <button onclick="rolar()" class="aperte" ><b class="bto">Clique para rolar</b></button>
+
+    <script>
+        function acao(){
+            let modal = document.querySelector("#modal")
+
+            modal.style.display = "block";
+        }
+        function fechar(){
+            let modal = document.querySelector("#modal")
+
+            modal.style.display = "none";
+        }
+    </script>
+    
+    <div id="div" class="game"><div onclick="acao()" class="btn"> Instruções do jogo! </div></div>
+        <div id="modal">
+            <div class="box">  
+                    <h1> Como jogar/regras! </h1>
+                    <br>  
+                    <h2>
+                    <ul>
+                        <li> Siga o caminho pela numeração dos quadrados.</li>
+                        <li> A cada rodada gire o dado apenas uma vez (o dado pode cair no mesmo num duas vezes).</li> 
+                        <li> Por cada pergunta respondida incorretamente (ou não respondida) o jogador deverá voltar duas casas.</li>
+                        <li> O jogador só poderá usar duas alternativas nas perguntas, se passar disso, ele irá fracassar, e será aplicada a regra acima.</li>
+                        <li> Se divirta!</li> 
+                    </ul>
+                    </h2>
+                <div onclick="fechar()" class="fechar">X</div>
+            </div>
+        </div>
+
+
+</body>
+</html>
